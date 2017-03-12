@@ -133,6 +133,8 @@ class Matlab(SceneIO):
                     utm_e = mat[mat_k].flatten()
                 elif 'yy' in mat_k:
                     utm_n = mat[mat_k].flatten()
+                elif 'utm_zone' in mat_k:
+                    utm_zone, utm_zone_letter = mat[mat_k[0],mat_k[1]]
 
         if not (num.all(utm_e) or num.all(utm_n)):
             self._log.warning(

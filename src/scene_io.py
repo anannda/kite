@@ -143,8 +143,8 @@ class Matlab(SceneIO):
         if utm_e.min() < 1e4 or utm_n.min() < 1e4:
             utm_e *= 1e3
             utm_n *= 1e3
-        utm_zone = 47
-        utm_zone_letter = 'Q'
+        utm_zone =33
+        utm_zone_letter = 'T'
         self._log.warning('Defaulting to UTM Zone %d%s' %
                           (utm_zone, utm_zone_letter))
         try:
